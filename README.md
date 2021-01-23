@@ -56,3 +56,52 @@ lab-4$ aws cloudformation describe-stacks \
     --output table
 ```
 
+# Payloads to test state machine
+
+## Sucess
+```json
+{
+  "customerId": "3_fail_auth",
+  "fareId": "wr_563",
+  "fareAmount": "$20.00",
+  "cc": "2424 2424 2424 2424",
+  "expiryDate": "12/22",
+  "cvv": "111"
+}
+```
+
+## Auth Fail
+```json
+{
+  "customerId": "3_fail_auth",
+  "fareId": "wr_563",
+  "fareAmount": "$20.00",
+  "cc": "2424 2424 2424 2424",
+  "expiryDate": "12/22",
+  "cvv": "111"
+}
+```
+## Charge Fail
+```json
+{
+  "customerId": "3_fail_charge",
+  "fareId": "wr_563",
+  "fareAmount": "$20.00",
+  "cc": "2424 2424 2424 2424",
+  "expiryDate": "12/22",
+  "cvv": "111"
+}
+```
+
+## Credit Fail
+```json
+{
+  "customerId": "3_fail_credit",
+  "fareId": "wr_563",
+  "fareAmount": "$20.00",
+  "cc": "2424 2424 2424 2424",
+  "expiryDate": "12/22",
+  "cvv": "111"
+}
+```
+
